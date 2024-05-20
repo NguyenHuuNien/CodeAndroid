@@ -70,6 +70,7 @@
         android:layout_height="wrap_content"
         android:text="Enter mobbile number"
         android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
         android:letterSpacing="0.08"
         android:textStyle="bold"
         android:textSize="25sp"
@@ -95,7 +96,9 @@
             android:hint="Mobile"
             android:inputType="phone"
             android:layout_margin="10dp"
+            android:textColor="@color/black"
             android:background="@drawable/edit_text_rounded_corner"
+            app:ccp_defaultNameCode="VIE"
             android:elevation="5dp"/>
     </LinearLayout>
     <LinearLayout

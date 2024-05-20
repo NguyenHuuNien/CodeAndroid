@@ -2,6 +2,7 @@ package com.hyunie.easychat
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
@@ -29,13 +30,15 @@ class LoginPhoneNumberActivity : AppCompatActivity() {
         sendOtpBtn = findViewById(R.id.send_otp_btn)
         progressBar = findViewById(R.id.login_progress_bar)
 
+        progressBar.visibility=View.GONE
+
         countryCodePicker.registerCarrierNumberEditText(phoneInput)
         sendOtpBtn.setOnClickListener{
             if(!countryCodePicker.isValidFullNumber){
                 phoneInput.setError("Phone number not valid")
                 return@setOnClickListener
             }
-            val intent = Intent(this, LoginOtpActivity::class.java)
+            val intent = Intent(this@LoginPhoneNumberActivity, LoginOtpActivity::class.java)
             intent.putExtra("phone",countryCodePicker.fullNumberWithPlus)
             startActivity(intent)
         }
