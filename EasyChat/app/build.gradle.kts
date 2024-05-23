@@ -7,7 +7,6 @@ plugins {
 android {
     namespace = "com.hyunie.easychat"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "com.hyunie.easychat"
         minSdk = 24
